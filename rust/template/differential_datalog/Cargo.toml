@@ -16,9 +16,9 @@ byteorder="0.4.2"
 itertools="^0.6"
 
 [dependencies]
-differential-dataflow = "0.8"
+differential-dataflow = { git = "https://github.com/frankmcsherry/differential-dataflow", branch = "event_driven" }
 abomonation = "0.7"
-timely = "0.8"
+timely = { git = "https://github.com/frankmcsherry/timely-dataflow", branch = "operate_rework" }
 fnv="1.0.2"
 num = "0.2"
 serde = "1.0"

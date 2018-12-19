@@ -16,7 +16,7 @@ use profile::*;
 /// addition of collections, and a final `distinct` operator applied before connecting the definition.
 pub struct Variable<'a, G: Scope, D: Default+Data+Hashable>
 where G::Timestamp: Lattice+Ord {
-    feedback: Option<Handle<Product<G::Timestamp, u32>, (D, Product<G::Timestamp, u32>, isize)>>,
+    feedback: Option<Handle<Child<'a, G, Product<G::Timestamp, u32>>, (D, Product<G::Timestamp, u32>, isize)>>,
     current: Collection<Child<'a, G, Product<G::Timestamp, u32>>, D>,
     cycle: Collection<Child<'a, G, Product<G::Timestamp, u32>>, D>,
     name: String
